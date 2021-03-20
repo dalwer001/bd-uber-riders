@@ -1,0 +1,21 @@
+[{
+    "id": 1,
+    "transportName": "BIKE",
+    "transportImage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZRlmM7QqL5OHUktrqWGCFDzKEsvwt2Fsm-Q&usqp=CAU",
+    "transportDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore expedita quae, eligendi excepturi at dignissimos? Itaque reiciendis fuga quam est."
+  }, {
+    "id": 2,
+    "transportName": "CAR",
+    "transportImage": "https://atlas-content-cdn.pixelsquid.com/stock-images/classic-european-compact-car-hatchback-4o7XZQ6-600.jpg",
+    "transportDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore expedita quae, eligendi excepturi at dignissimos? Itaque reiciendis fuga quam est."
+  }, {
+    "id": 3,
+    "transportName": "BUS",
+    "transportImage": "https://png.pngtree.com/png-vector/20191205/ourmid/pngtree-yellow-school-bus-vector-illustration-on-white-background-png-image_2025515.jpg",
+    "transportDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore expedita quae, eligendi excepturi at dignissimos? Itaque reiciendis fuga quam est."
+  }, {
+    "id": 4,
+    "transportName": "TRAIN",
+    "transportImage": "https://freevector-images.s3.amazonaws.com/uploads/vector/preview/36550/36550.png",
+    "transportDescription": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolore expedita quae, eligendi excepturi at dignissimos? Itaque reiciendis fuga quam est."
+  }]
