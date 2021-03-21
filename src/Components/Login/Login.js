@@ -72,7 +72,6 @@ const Login = () => {
         let isFieldValid = true;
         if (e.target.name === 'email') {
             isFieldValid = /\S+@\S+\.\S+/.test(e.target.value);
-
         }
         if (e.target.name === 'password') {
             const isPasswordValid = e.target.value.length > 6;
@@ -84,6 +83,7 @@ const Login = () => {
             newUserInfo[e.target.name] = e.target.value;
             setUser(newUserInfo);
         }
+
     }
 //........................................//
 
@@ -100,6 +100,8 @@ const Login = () => {
                     newUserInfo.success = true;
                     setUser(newUserInfo);
                     updateUserName(user.name);
+                    setLoggedInUser(newUserInfo);
+                    history.replace(from);
                 })
                 .catch((error) => {
                     const newUserInfo = { ...user };
@@ -119,8 +121,6 @@ const Login = () => {
                     newUserInfo.success = true;
                     setUser(newUserInfo);
                     setLoggedInUser(newUserInfo);
-                    console.log(newUser);
-                    console.log('sign in user info', res.user);
                     history.replace(from);
                 })
                 .catch((error) => {
@@ -156,10 +156,14 @@ const Login = () => {
     }
 //........................................//
 
+
+
+
+
     return (
         <div className="container">
             <div className="col-md-12">
-                <div className="card bg-secondary shadow text-white mx-auto mt-5" style={{ width: '30rem', height: '31rem' }}>
+                <div className="card bg-dark shadow text-white mx-auto mt-5" style={{ width: '25rem', height: '31rem' }}>
 
                     {/* Login form */}
                     <form className="p-3" onSubmit={handleSubmit}>
@@ -173,25 +177,22 @@ const Login = () => {
                         <input type="text" class="form-control" name="email" placeholder="Your Email" onBlur={handleBlur} required />
                         <label for="" class="p-2">Password</label>
                         <input type="password" class="form-control" name="password" placeholder="password" onBlur={handleBlur} />
-                        <label for="" class="p-2">{newUser ? 'Confirm Password' : ''}</label>
-                        {
-                            newUser && <input type="password" class="form-control" id="" placeholder="password"></input>
-                        }
                         <button className="btn btn-danger mt-3 w-100">{newUser ? 'Create An Account' : 'Login'}</button>
-                        <p> {newUser ? 'Already have an account?' : 'Do not have an account?'} <a href="/" onClick={()=> setNewUser(!newUser)} name="newUser"> {newUser ? 'Login' : 'Create An Account'}</a></p>
+                        <p> {newUser ? 'Already have an account?' : 'Do not have an account?'} <Link to="#" onClick={()=> setNewUser(!newUser)} name="newUser"> {newUser ? 'Login' : 'Create An Account'}</Link></p>
                     </form>
                 </div>
 
                         {/* show error message */}
                 <div>
                 <p style={{ color: 'red', textAlign:'center' }}>{user.error}</p>
+                {user.success && <p style={{color:'green',textAlign:'center'}}> User {newUser?'Created':'logged In' }Successfully.</p>}
                 </div>
 
 
                         {/* Show google login */}
                 <div className="text-center mt-3">
                     <h5>or</h5>
-                    <button className="btn btn-light mt-3 w-25 shadow border" onClick={handleGoogleSignIn}><img src={google} alt="" className="m-2" />Continue with google</button>
+                    <button className="btn btn-light m-3 w-25 shadow rounded-pill" onClick={handleGoogleSignIn}><img src={google} alt="" className="m-2 rounded-circle" />Continue with google</button>
                 </div>
             </div>
         </div>

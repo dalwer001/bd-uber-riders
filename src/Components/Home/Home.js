@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import fakeData from '../../fakeData/fakeData.json'
+import fakeData from '../../fakeData/fakeData.json';
 import Card from '../Card/Card';
 import './Home.css'
 

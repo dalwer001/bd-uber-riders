@@ -12,6 +12,8 @@ import Header from './Components/Header/Header';
 import { useState } from 'react';
 import { createContext } from 'react';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import TransportInfo from './Components/TransportInfo/TransportInfo';
+import TakeRide from './Components/TakeRide/TakeRide';
 
 export const UserContext = createContext();
 
@@ -29,15 +31,21 @@ function App(props) {
           <Route path="/home">
             <Home></Home>
           </Route>
-          <PrivateRoute  path="/destination">
-            <Destination></Destination>
-          </PrivateRoute>
-          <PrivateRoute  path="/destination/:transportName">
-            <Destination></Destination>
-          </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
+          
+          <PrivateRoute  path="/destination/:transportName/:id">
+            <Destination></Destination>
+          </PrivateRoute>
+          <PrivateRoute  path="/destination">
+            <TakeRide></TakeRide>
+          </PrivateRoute>
+          <PrivateRoute path="/transportInfo/:id/:transportName">
+            <TransportInfo></TransportInfo>
+          </PrivateRoute>
+          
+          
           <Route path="*">
             <NotFound></NotFound>
           </Route>
