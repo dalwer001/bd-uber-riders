@@ -8,7 +8,9 @@ This is a website about "Find Ride for our transportation".
 
 => User can select the destination by login.
 
-=> to login user need to create an account.
+=> For new user need to create an account.
+
+=> Existing user can login directly and choose the ride for transportation.
 
 => User need to register only once and with unique email.
 
