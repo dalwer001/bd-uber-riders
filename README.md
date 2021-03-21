@@ -2,7 +2,7 @@ All About Ride Booking Website.
 
 Live Link: https://bd-uber-riders.web.app
 
-This is a website about "Find Ride for our transportation". 
+This is a website about "Find Ride for user transportation". 
 
 => show ride options in the website.
 
